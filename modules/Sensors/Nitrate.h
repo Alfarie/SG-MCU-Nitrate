@@ -26,6 +26,7 @@ class Nitrate : public Task
         current_time += delta_time / 1000;
         if (current_time >= 2000)
         {
+            mpuCom.println("Request Nitrate");
             sendRequest();
             current_time = 0;
         }
